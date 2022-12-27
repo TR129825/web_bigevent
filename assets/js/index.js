@@ -29,17 +29,16 @@ function getUserInfo() {
             }
             // 调用renderAvatar渲染用户头像
             renderAvatar(res.data);
-            console.log(res);
         },
-        complete: function(res) {
-            if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
-                // 强制清空token
-                localStorage.removeItem('token')
-                    // 强制跳转到登录页面
-                location.href = '/login.html'
-            }
+        // complete: function(res) {
+        //     if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
+        //         // 强制清空token
+        //         localStorage.removeItem('token')
+        //             // 强制跳转到登录页面
+        //         location.href = '/login.html'
+        //     }
 
-        }
+        // }
 
     })
 }
